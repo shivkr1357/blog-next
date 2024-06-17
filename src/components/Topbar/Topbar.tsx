@@ -5,11 +5,13 @@ import {
   Box,
   Toolbar,
   Container,
-  Tooltip,
   styled,
   Typography,
+  ToggleButton,
 } from "@mui/material";
-import Link from "next/link";
+import { useThemeState } from "@/context/ThemeContext";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const CustomButton = styled("button")({
   color: "white",
@@ -24,6 +26,8 @@ const CustomButton = styled("button")({
 });
 
 const Topbar = () => {
+  const { theme, toggleTheme } = useThemeState();
+
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "rgb(28,27,34)" }}>
       <Container maxWidth="xl">
@@ -44,7 +48,25 @@ const Topbar = () => {
                 alignItems: "center",
               }}
               gap={2}
-            ></Box>
+            >
+              <ToggleButton
+                value="check"
+                selected={theme === "light"}
+                onChange={() => {
+                  toggleTheme();
+                }}
+              >
+                {theme === "light" ? (
+                  <>
+                    <DarkModeIcon />
+                  </>
+                ) : (
+                  <>
+                    <WbSunnyIcon sx={{ color: "white" }} />
+                  </>
+                )}
+              </ToggleButton>
+            </Box>
           </Box>
         </Toolbar>
       </Container>

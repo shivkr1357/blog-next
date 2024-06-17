@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "prismjs/themes/prism.css";
 import Topbar from "@/components/Topbar/Topbar";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import AppMainProvider from "@/context/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Topbar />
-        <Sidebar />
-        {children}
+        <AppMainProvider>
+          <Topbar />
+          <Sidebar />
+          {children}
+        </AppMainProvider>
       </body>
     </html>
   );

@@ -1,0 +1,21 @@
+.mainCode {
+  width: 10%;
+  color: "crimson";
+  background-color: #d1d1d1;
+  /* padding: 2px; */
+  font-size: 105%;
+  width: 100%;
+  font-family: Consolas, "courier new";
+}
+
+.copyIcon {
+  width: 100%;
+  text-align: end;
+  background-color: #181e3f;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  align-items: center;
+}
+.code {
+  padding: 20px;
+}
