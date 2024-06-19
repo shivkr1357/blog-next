@@ -7,7 +7,7 @@ import Prism from "prismjs";
 
 export default function CodeComponent({ code, language }: any) {
   useEffect(() => {
-    Prism.highlightAll(); // Apply syntax highlighting
+    Prism.highlightAll();
   }, []);
   return (
     <Stack className={styles.mainCode}>

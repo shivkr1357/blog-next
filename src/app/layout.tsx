@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "prismjs/themes/prism.css";
+import "prismjs/themes/prism-okaidia.css";
 import Topbar from "@/components/Topbar/Topbar";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import AppMainProvider from "@/context/ThemeContext";

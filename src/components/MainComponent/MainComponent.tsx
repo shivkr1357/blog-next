@@ -8,8 +8,9 @@ function MainComponent() {
       display={"flex"}
       justifyContent={"space-between"}
       // border={"1px solid blue"}
-      width={{ xs: "95%", sm: "90%", md: "80%" }}
+      width={{ xs: "90%", sm: "98%", md: "80%" }}
       alignItems={{ xs: "flex-start", sm: "center", md: "flex-start" }}
+      padding={{ xs: "2%", sm: "2%", md: "1%" }}
       alignSelf={"flex-start"}
       height={"100%"}
       top={"900px"}

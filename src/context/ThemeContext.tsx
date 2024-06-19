@@ -9,7 +9,7 @@ export interface ThemeStateValues {
 const ThemeContext = createContext<ThemeStateValues | undefined>(undefined);
 
 const AppMainProvider = ({ children }: any) => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));

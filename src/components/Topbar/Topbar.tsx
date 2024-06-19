@@ -29,7 +29,10 @@ const Topbar = () => {
   const { theme, toggleTheme } = useThemeState();
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "rgb(28,27,34)" }}>
+    <AppBar
+      position="fixed"
+      sx={{ backgroundColor: theme === "dark" ? "rgb(28,27,34)" : "#f1f1f1" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: "flex-end" }}>
           <Box
@@ -40,7 +43,9 @@ const Topbar = () => {
               width: "100%",
             }}
           >
-            <Typography>ItsIndianGuy Blog</Typography>
+            <Typography color={theme === "dark" ? "#fff" : "#000"}>
+              ItsIndianGuy Blog
+            </Typography>
             <Box
               sx={{
                 display: "flex",
@@ -58,7 +63,7 @@ const Topbar = () => {
               >
                 {theme === "light" ? (
                   <>
-                    <DarkModeIcon />
+                    <DarkModeIcon sx={{ color: "#000" }} />
                   </>
                 ) : (
                   <>

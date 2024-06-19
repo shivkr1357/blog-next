@@ -1,11 +1,12 @@
 .mainCode {
-  width: 10%;
+  width: 100%;
   color: "crimson";
   background-color: #d1d1d1;
   /* padding: 2px; */
-  font-size: 105%;
+  font-size: 80%;
   width: 100%;
   font-family: Consolas, "courier new";
+  border-radius: 5px;
 }
 
 .copyIcon {
